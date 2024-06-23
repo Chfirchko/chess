@@ -8,10 +8,10 @@ class Pawn(Pieces):
     def __init__(self, my_cords, color):
         super().__init__(my_cords, color)
 
-    def move(self, my_cords, color, n):
+    def move(self, my_cords, color, n): # my_cords - координаты пешки color - цвет n - на сколько идет пешка
         x, y = my_cords.copy()
         if color == 'b':
-            my_cords[0] += n  # cords = [1, 5]
+            my_cords[0] += n
         else:
             my_cords[0] -= n
         table[my_cords[0]][my_cords[1]] = table[x][y]
